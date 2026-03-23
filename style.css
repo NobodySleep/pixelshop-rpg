@@ -1,0 +1,55 @@
+/* ===== CSS VARIABLES & RESET ===== */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --ps-bg: #1e1e1e;
+  --ps-panel: #2b2b2b;
+  --ps-border: #3a3a3a;
+  --ps-blue: #4a9eff;
+  --ps-blue-dark: #1473e6;
+  --ps-orange: #fa7b17;
+  --ps-teal: #00c8b4;
+  --ps-red: #e34850;
+  --ps-green: #2dc937;
+  --ps-yellow: #f7c948;
+  --ps-text: #e0e0e0;
+  --ps-text-muted: #8a8a8a;
+  --ps-highlight: #4a9eff33;
+
+  --font-display: 'Space Grotesk', sans-serif;
+  --font-body: 'Inter', sans-serif;
+}
+
+html, body {
+  width: 100%; height: 100%;
+  background: #000;
+  overflow: hidden;
+  font-family: var(--font-body);
+  color: var(--ps-text);
+  user-select: none;
+}
+
+#game-container {
+  position: relative;
+  width: 100vw; height: 100vh;
+  display: flex; align-items: center; justify-content: center;
+}
+
+#gameCanvas {
+  display: block;
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+}
+
+#ui-overlay {
+  position: absolute; inset: 0;
+  pointer-events: none;
+}
+
+/* ===== CANVAS CURSOR ===== */
+canvas { cursor: crosshair; }
+
+/* ===== SCROLLBAR STYLING ===== */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--ps-panel); }
+::-webkit-scrollbar-thumb { background: var(--ps-border); border-radius: 3px; }

@@ -1,0 +1,12 @@
+{
+  "name": "pixelshop-rpg",
+  "version": "1.0.0",
+  "description": "A Photoshop-themed rogue-like RPG",
+  "scripts": {
+    "build": "node -e \"const {buildSync}=require('./node_modules/esbuild');buildSync({entryPoints:['js/main.js'],bundle:true,outfile:'dist/bundle.js',platform:'browser',minify:true,sourcemap:true});console.log('Build complete!');\"",
+    "dev": "python -m http.server 3000"
+  },
+  "devDependencies": {
+    "esbuild": "^0.25.2"
+  }
+}
